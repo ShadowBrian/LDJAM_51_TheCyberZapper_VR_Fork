@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52b8b393eb3f5242acfd8f21d8428fb, type: 3}
+  m_Name: data_weapon_RedVenom
+  m_EditorClassIdentifier: 
+  entityName: Red Venom
+  pool: {fileID: 0}
+  number: 50
+  prefab: {fileID: 4813858113953075522, guid: 7f7a9a8f4db0cee4493bfef26523f447, type: 3}
+  randomScale: 0
+  fireRate: 1
+  shakePower: 4
