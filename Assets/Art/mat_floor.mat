@@ -114,6 +114,7 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _corruption: 0
     - _intensity: 0
     - _tillingX: 20
     - _tillingY: 20

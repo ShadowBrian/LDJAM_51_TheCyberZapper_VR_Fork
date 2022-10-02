@@ -7,7 +7,7 @@ public class Enemy : Entity
     [SerializeField] Weapon weapon;
 
     [SerializeField] Transform target;
-    [SerializeField][Range(0, 10f)] float range = 5f;
+    [SerializeField][Range(0, 15f)] float range = 5f;
     [SerializeField] LayerMask layerMask;
 
     [Header("Storage")]

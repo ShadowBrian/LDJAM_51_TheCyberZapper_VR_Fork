@@ -11,12 +11,6 @@ public class EnemyManager : MonoBehaviour
 
     [SerializeField] Entity[] enemies;
 
-    void Start()
-    {
-        //enemies = poolParent.GetComponentsInChildren<Enemy>();
-        playerTransform = player.transform;
-    }
-
     private void Update()
     {
         
@@ -25,6 +19,13 @@ public class EnemyManager : MonoBehaviour
     public void InitNewArena(Arena newArena)
     {
         DescativateAll();
+        playerTransform = player.transform;
+
+        if(newArena.restingArena)
+        {
+            // Do not spawn ennemies
+            return;
+        }
 
         int enemiesToSpawn = Random.Range(newArena.minNumber, newArena.maxNumber);
         enemies = new Entity[enemiesToSpawn];

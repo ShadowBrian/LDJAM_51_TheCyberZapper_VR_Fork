@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Arena : MonoBehaviour
 {
+    public bool restingArena = false;
+
     [Header("Enemies")]
     public int minNumber;
     public int maxNumber;
@@ -10,6 +12,19 @@ public class Arena : MonoBehaviour
     [Header("Spawn")]
     [SerializeField] Transform playerSpawn;
     [SerializeField] Transform enemiSpawn;
+    [SerializeField] Transform collectibles;
+
+    public void Activate()
+    {
+        /*
+        for (int i = 0; i < collectibles.childCount; i++)
+        {
+            Transform t = collectibles.GetChild(i);
+            if (!t) continue;
+            t.gameObject.SetActive(true);
+        }
+        */
+    }
 
     public Transform GetPlayerSpawn()
     {

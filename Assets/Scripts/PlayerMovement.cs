@@ -21,12 +21,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!player.gameManager.inGame) return;
+
         playerMovement.x = Input.GetAxis("Horizontal");
         playerMovement.z = Input.GetAxis("Vertical");
+
 
         dir = target.playerTargetPos - transform.position;
         dir.y = 0;
         rb.rotation = Quaternion.LookRotation(dir, Vector3.up);
+
+        
+        player.gameManager.uiManager.TiltUI(-rb.velocity.z, -rb.velocity.x);
     }
 
     private void FixedUpdate()

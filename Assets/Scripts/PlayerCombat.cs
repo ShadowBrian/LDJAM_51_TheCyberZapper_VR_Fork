@@ -14,6 +14,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
+        if (!player.gameManager.inGame) return;
+
         restingTime += Time.deltaTime;
         if (Input.GetButton("Fire1")) Fire();
     }

@@ -7,9 +7,9 @@ public class ArenaManager : MonoBehaviour
     [Header("Storage")]
     public Arena currentArena;
 
-    void Start()
+    void Awake()
     {
-        
+        arenas = GetComponentsInChildren<Arena>();
     }
 
     public Arena GetNewArena()
@@ -30,6 +30,8 @@ public class ArenaManager : MonoBehaviour
         }
 
         currentArena = newArena;
+
+
         return currentArena;
     }
 

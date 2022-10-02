@@ -29,6 +29,16 @@ public class Bullet : Entity
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out Entity e))
+        {
+            //Debug.Log("Collided with " + collision.transform.name);
+            DoDamage(e);
+        }
+
+    }
+
     void DoDamage(Entity entity)
     {
         entity.Damage(damage);

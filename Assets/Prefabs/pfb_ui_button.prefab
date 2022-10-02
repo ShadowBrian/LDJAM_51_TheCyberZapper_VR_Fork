@@ -26,16 +26,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2460666637423510549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000011702181}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999744, y: 0.99997413, z: 0.99997413}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7529308800103763891}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 162.60997, y: -14.055094}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 132.2, y: 0}
   m_SizeDelta: {x: 21.99, y: 45.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4816368343621136670
@@ -66,10 +66,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <
+  m_text: '>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d9c4e7a1585498442ba7865523a4c8e9, type: 2}
-  m_sharedMaterial: {fileID: 2789613951297343682, guid: d9c4e7a1585498442ba7865523a4c8e9,
+  m_fontAsset: {fileID: 11400000, guid: 0b3df8913b9675e488441897969c27ac, type: 2}
+  m_sharedMaterial: {fileID: 2789613951297343682, guid: 0b3df8913b9675e488441897969c27ac,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -235,11 +235,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 0.2392157, b: 0.5137255, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.47500002, b: 0.66443294, a: 1}
+    m_PressedColor: {r: 0.546, g: 0.15506402, b: 0.29612333, a: 1}
+    m_SelectedColor: {r: 1, g: 0.2392157, b: 0.5137255, a: 1}
+    m_DisabledColor: {r: 1, g: 0.2392157, b: 0.5137255, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -372,8 +372,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
