@@ -9,6 +9,7 @@ public class PoolableEntity : ScriptableObject
     public int number;
 
     public Entity prefab;
+    public AudioClip spawnSound;
 
     [Header("Var")]
     public bool randomScale;

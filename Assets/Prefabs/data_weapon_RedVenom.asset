@@ -16,6 +16,7 @@ MonoBehaviour:
   pool: {fileID: 0}
   number: 50
   prefab: {fileID: 4813858113953075522, guid: 7f7a9a8f4db0cee4493bfef26523f447, type: 3}
+  spawnSound: {fileID: 8300000, guid: 36ee427593c8d9b468517cebc3253e0a, type: 3}
   randomScale: 0
   fireRate: 1
   shakePower: 4

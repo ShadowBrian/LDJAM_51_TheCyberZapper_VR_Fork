@@ -110,6 +110,7 @@ public class GameManager : Singleton<GameManager>
         newArena.Activate();
         player.transform.position = newArena.GetPlayerSpawn().position + Vector3.up*0.1f;
 
+        player.combat.GetNewWeapon();
         enemyManager.InitNewArena(newArena);
         roomNumber++;
         uiManager.SetRoomNumber(roomNumber);

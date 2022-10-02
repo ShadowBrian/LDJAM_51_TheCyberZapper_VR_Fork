@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d52b8b393eb3f5242acfd8f21d8428fb, type: 3}
-  m_Name: data_weapon_LiquidLaser
+  m_Name: data_weapon_Sniper
   m_EditorClassIdentifier: 
-  entityName: Liquid Laser
+  entityName: Sniper
   pool: {fileID: 0}
-  number: 50
-  prefab: {fileID: 4813858113953075522, guid: cef90e499f112cd48bc9dcb17bdc990e, type: 3}
+  number: 15
+  prefab: {fileID: 4813858113953075522, guid: 148045e296ddf0045a582eeb8d885e63, type: 3}
   spawnSound: {fileID: 8300000, guid: 30462af4649492f40ab004b4ba4b5172, type: 3}
   randomScale: 1
-  fireRate: 0.025
-  shakePower: 2
+  fireRate: 1.5
+  shakePower: 10

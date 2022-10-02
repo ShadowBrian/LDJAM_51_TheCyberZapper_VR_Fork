@@ -16,14 +16,14 @@ public class Arena : MonoBehaviour
 
     public void Activate()
     {
-        /*
+        
         for (int i = 0; i < collectibles.childCount; i++)
         {
             Transform t = collectibles.GetChild(i);
             if (!t) continue;
             t.gameObject.SetActive(true);
         }
-        */
+        
     }
 
     public Transform GetPlayerSpawn()

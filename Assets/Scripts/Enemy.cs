@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class Enemy : Entity
 {
+    [SerializeField] bool boss;
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Weapon weapon;
 
@@ -19,9 +20,15 @@ public class Enemy : Entity
     private void FixedUpdate()
     {
         if (!target) return;
-        agent.destination = target.position;
+        if(!boss)agent.destination = target.position;
 
         dist = Vector3.Distance(target.position, transform.position);
+        if (boss)
+        {
+            Vector3 dir = target.position - transform.position;
+            dir.y = 0;
+            transform.rotation = Quaternion.LookRotation(dir);
+        }
         //if (dist <= range) CheckIfViewIsOpen();
     }
 

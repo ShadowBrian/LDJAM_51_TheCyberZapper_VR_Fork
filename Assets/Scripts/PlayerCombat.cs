@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
 
     [Header("Weapon")]
     [SerializeField] Transform gunPos;
+    [SerializeField] Weapon[] weaponArray;
     [SerializeField] Weapon weapon;
 
     [Header("Storage")]
@@ -30,4 +31,9 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public Weapon GetNewWeapon()
+    {
+        weapon = weaponArray[Random.Range(0, weaponArray.Length)];
+        return weapon;
+    }
 }

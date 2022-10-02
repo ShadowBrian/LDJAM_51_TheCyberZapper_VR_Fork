@@ -3,6 +3,7 @@ using UnityEngine;
 public class Pool : MonoBehaviour
 {
     public PoolableEntity entity;
+    [SerializeField] AudioSource audioSource;
     [SerializeField] Entity[] entityArray;
     [SerializeField] int index = 0;
     [SerializeField] int length = 0;
@@ -37,6 +38,8 @@ public class Pool : MonoBehaviour
     public Entity GetEntity()
     {
         Entity g = entityArray[index];
+
+        if (entity.spawnSound) audioSource.PlayOneShot(entity.spawnSound);
 
         index++;
         if(index >= length) index = 0;

@@ -11,6 +11,7 @@ public class Bullet : Entity
     public override void Launch(Vector3 pos, Vector3 dir)
     {
         transform.position = pos;
+        transform.rotation = Quaternion.LookRotation(dir);
         gameObject.SetActive(true);
         rb.velocity = dir * speed;
     }
