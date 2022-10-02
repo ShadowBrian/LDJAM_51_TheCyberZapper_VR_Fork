@@ -106,7 +106,7 @@ public class GameManager : Singleton<GameManager>
         timerValue = 10f;
         Shader.SetGlobalFloat("_corruption", 0f);
 
-        Arena newArena = arenaManager.GetNewArena();
+        Arena newArena = arenaManager.GetNewArena(roomNumber < 2);
         newArena.Activate();
         player.transform.position = newArena.GetPlayerSpawn().position + Vector3.up*0.1f;
 
@@ -124,6 +124,7 @@ public class GameManager : Singleton<GameManager>
         uiManager.SetRoomNumber(roomNumber);
 
         uiManager.DisplayGame(false);
+        TenSeconds(false);
         player.Respawn();
     }
 

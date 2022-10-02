@@ -35,7 +35,7 @@ public class ui_Dialog : MonoBehaviour
 
         if (disableAfterDone)
         {
-            yield return new WaitForSecondsRealtime(2f);
+            yield return new WaitForSecondsRealtime(4f);
             gameObject.SetActive(false);
         }
     }

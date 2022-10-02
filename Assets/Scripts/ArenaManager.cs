@@ -12,9 +12,9 @@ public class ArenaManager : MonoBehaviour
         arenas = GetComponentsInChildren<Arena>();
     }
 
-    public Arena GetNewArena()
+    public Arena GetNewArena(bool firstTime)
     {
-        int maxTry = 5;
+        int maxTry = 7;
         Arena newArena = currentArena;
         int index;
 
@@ -22,8 +22,11 @@ public class ArenaManager : MonoBehaviour
         {
             index = Random.Range(0, arenas.Length);
             Debug.Log(index);
+
             if (arenas[index] != newArena)
             {
+                if (firstTime && arenas[index].difficulty > 50) continue;
+
                 newArena = arenas[index];
                 break;
             }

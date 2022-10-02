@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d52b8b393eb3f5242acfd8f21d8428fb, type: 3}
-  m_Name: data_weapon_Shotgun
+  m_Name: data_weapon_BossShotgun
   m_EditorClassIdentifier: 
   entityName: Liquid Laser
   pool: {fileID: 0}
   number: 50
-  prefab: {fileID: 4813858113953075522, guid: a70387bf8ffceb441bb0db70dd7bc46c, type: 3}
+  prefab: {fileID: 4813858113953075522, guid: ae677ae5563647d48975cc9e123ff98a, type: 3}
   spawnSound: {fileID: 8300000, guid: 30462af4649492f40ab004b4ba4b5172, type: 3}
   randomScale: 1
   fireRate: 0.5

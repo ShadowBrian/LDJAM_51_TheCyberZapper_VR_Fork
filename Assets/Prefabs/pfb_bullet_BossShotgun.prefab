@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4813858113953075524}
   - component: {fileID: 4813858113953075525}
   - component: {fileID: 4813858113953075522}
-  m_Layer: 7
-  m_Name: pfb_bullet_shotgun
+  m_Layer: 9
+  m_Name: pfb_bullet_BossShotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
