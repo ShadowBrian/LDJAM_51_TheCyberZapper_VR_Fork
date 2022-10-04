@@ -28,7 +28,7 @@ public class uiManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (UnityXRInputBridge.instance.GetButtonDown(XRButtonMasks.secondaryButton,XRHandSide.LeftHand) || UnityXRInputBridge.instance.GetButtonDown(XRButtonMasks.secondaryButton, XRHandSide.RightHand))
         {
             Debug.Log("PAUSE GAME");
 
@@ -46,7 +46,7 @@ public class uiManager : MonoBehaviour
 
     void SetUIRot(Quaternion rot, float speed)
     {
-        gameUI.transform.rotation = Quaternion.Lerp(gameUI.transform.rotation, rot, speed);
+        //gameUI.transform.rotation = Quaternion.Lerp(gameUI.transform.rotation, rot, speed);
     }
 
     public void SetLife(float value, float max)
