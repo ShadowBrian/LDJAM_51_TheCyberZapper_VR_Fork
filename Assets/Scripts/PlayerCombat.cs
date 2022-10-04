@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
         if (!player.gameManager.inGame) return;
 
         restingTime += Time.deltaTime;
-        if (Input.GetButton("Fire1")) Fire();
+        if (UnityXRInputBridge.instance.GetButton(XRButtonMasks.triggerButton,XRHandSide.RightHand)) Fire();
     }
 
     void Fire()
