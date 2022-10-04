@@ -32,10 +32,10 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
 
 
-        if (!Application.isEditor) inGame = false;
+        //if (!Application.isEditor) inGame = false;
 
         if (inGame) StartGame();
         else uiManager.DisplayGame(false);
@@ -72,7 +72,7 @@ public class GameManager : Singleton<GameManager>
         if (timerValue <= 0f) 
         {
 
-            if (Input.GetKeyDown(KeyCode.Space)) UseZappAbility();
+            if (UnityXRInputBridge.instance.GetButtonDown(XRButtonMasks.primaryButton,XRHandSide.LeftHand) || UnityXRInputBridge.instance.GetButtonDown(XRButtonMasks.primaryButton, XRHandSide.RightHand)) UseZappAbility();
 
             if(playerZapped)
             {
