@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]Vector3 playerMovement;
     [SerializeField]Vector3 dir;
 
+    public Transform PlayerHead;
+
     void Start()
     {
         target = player.target;
@@ -23,21 +25,32 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!player.gameManager.inGame) return;
 
-        playerMovement.x = Input.GetAxis("Horizontal");
-        playerMovement.z = Input.GetAxis("Vertical");
+        playerMovement.x = UnityXRInputBridge.instance.GetVec2(XR2DAxisMasks.primary2DAxis,XRHandSide.LeftHand).x;
+        playerMovement.z = UnityXRInputBridge.instance.GetVec2(XR2DAxisMasks.primary2DAxis, XRHandSide.LeftHand).y;
 
-
-        dir = target.playerTargetPos - transform.position;
+        /*dir = target.playerTargetPos - transform.position;
         dir.y = 0;
-        rb.rotation = Quaternion.LookRotation(dir, Vector3.up);
+        rb.rotation = Quaternion.LookRotation(dir, Vector3.up);*/
 
-        
-        player.gameManager.uiManager.TiltUI(-rb.velocity.z, -rb.velocity.x);
+        if (UnityXRInputBridge.instance.GetButtonDown(XRButtonMasks.primary2DAxisLeft, XRHandSide.RightHand))
+        {
+            rb.transform.RotateAround(PlayerHead.position, Vector3.up, -30f);
+        }
+
+        if (UnityXRInputBridge.instance.GetButtonDown(XRButtonMasks.primary2DAxisRight, XRHandSide.RightHand))
+        {
+            rb.transform.RotateAround(PlayerHead.position, Vector3.up, 30f);
+        }
+
+
+        //player.gameManager.uiManager.TiltUI(-rb.velocity.z, -rb.velocity.x);
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = playerMovement * playerSpeed + (rb.velocity.y * Vector3.up);
+        var flatforward = PlayerHead.forward;
+        flatforward.y = 0;
+        rb.velocity = Quaternion.LookRotation(flatforward) * playerMovement * playerSpeed + (rb.velocity.y * Vector3.up);
     }
 
 }
